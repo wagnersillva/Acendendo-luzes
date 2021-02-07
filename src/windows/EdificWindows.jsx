@@ -110,7 +110,6 @@ class EdificWindows extends Component {
             windows_edific.map((value, index) => {
                 return (
                     <div key={index} className="windowControl" id={`windowControl-${index}`}>
-                        <div className="ciruloControl"><span>{`${index + 1}`}</span></div>
                         <div className='liga-desliga'>
                             <span onClick={e => {
                                 e.preventDefault()

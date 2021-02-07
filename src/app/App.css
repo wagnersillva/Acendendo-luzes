@@ -1,7 +1,7 @@
 
 #App{
   width: 100vw;
-  height: 100vh;
+  min-width: 360px;
 }
 
 .appSunset{
@@ -13,16 +13,19 @@
 }
 
 .App div {
+  max-height: 620px;
   text-align: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .windows {
   padding: 30px 30px 80px 30px;
+  min-width: 300px;
   width: 400px;
   height: 430px;
-  position: absolute;
+  position: relative;
   left: 60px;
   top: 50px;
   background-color: #d2c378;
@@ -33,7 +36,7 @@
 
 .window {
   margin: 5px 20px 5px 20px;
-  width: 50px;
+  width: 11%;
   height: 70px;
 }
 
@@ -50,7 +53,7 @@
   width: 500px;
   height: 370px;
   position: relative;
-  left: 560px;
+  left: 10%;
   top: 220px;
   background: rgba( 81, 5, 5, 0.50 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -80,45 +83,33 @@
   flex-direction: row;
 }
 
-.windowControl > .ciruloControl {
-  position: relative;
-  top: 9px;
-  width: 45%;
-  height: 70%;
-  border-radius: 60%;
-  background-color: #d2c378;
-}
-.windowControl > .ciruloControl > span{
-  position: relative;
-  text-align: center;
-  top: 7px;
-  width: 100%;
-}
-
 .windowControl > .liga-desliga {
   position: relative;
   top: 8px;
   left: 8px;
-  width: 25%;
-  height: 25%;
   display: flex;
   flex-direction: column;
 }
 
 .windowControl > .liga-desliga > span {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-size: 10px;
   background: rgb(216 255 122 / 25%);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 50px;
+  width: 40px;
+  padding: 4px;
 }
 
 .windowControl > .liga-desliga > span:hover {
   cursor: pointer;
   background: rgb(255 255 255 / 25%);
+}
+.windowControl > .liga-desliga > span:active {
+  cursor: pointer;
+  background: rgba(95, 11, 11, 0.756);
 }
 
 #control-geral {
@@ -164,7 +155,7 @@
 .predioEstrutura > .alpendes .apende1{
   z-index: 1;
     position: absolute;
-    left: 198px;
+    left: 187px;
     top: 180px;
     width: 175px;
     height: 15px;
@@ -173,7 +164,7 @@
 .predioEstrutura > .alpendes .apende2{
   z-index: 1;
     position: absolute;
-    left: 198px;
+    left: 187px;
     top: 330px;
     width: 175px;
     height: 15px;
@@ -182,7 +173,7 @@
 .predioEstrutura > .alpendes .apende3{
   z-index: 1;
   position: absolute;
-  left: 198px;
+  left: 187px;
   top: 470px;
   width: 175px;
   height: 15px;
@@ -191,7 +182,7 @@
 .pinturadomeio{
   z-index: 1;
   position: absolute;
-  left: 204px;
+  left: 193px;
   top: 50px;
   width: 164px;
   height: 445px;
@@ -201,7 +192,7 @@
 .porta > .part1 {
   position: absolute;
   top: 495px;
-  left: 209px;
+  left: 197px;
   width: 67px;
   height: 87px;
   background-color: rgb(91, 45, 12);
@@ -212,7 +203,7 @@
 .porta > .part2 {
   position: absolute;
   top: 495px;
-  left: 280px;
+  left: 272px;
   width: 67px;
   height: 87px;
   background-color: rgb(91, 45, 12);
@@ -272,6 +263,7 @@
 
 .grama {
   width: 100vw;
+  min-width: 360px;
   height: 155px;
   background-color: olivedrab;
   position: absolute;
@@ -283,7 +275,7 @@
   height: 35px;
   position: absolute;
   top: 590px;
-  left: 201px;
+  left: 191px;
   background-color: #696969;
   z-index: 1;
 }
@@ -312,13 +304,19 @@ div > .display-none {
   display: none;
 }
 
-@media(max-width: 1070px) {
-  .painel-control {left: 520px;}
+@media(max-width: 1080px) {
+  .painel-control {left: 8%;}
 }
-@media(max-width: 1030px) {
+@media(max-width: 1060px) {
   .painel-control {
-    left: 39px;
+    left: -422px;
     top: 640px;
+  }
+}
+@media (max-width: 965px){
+  .painel-control {
+    left: 40px;
+    top: 100px;
   }
 }
 @media(max-width: 720px) {
@@ -344,27 +342,104 @@ div > .display-none {
     left: 10px;
   }
   .pinturadomeio {
-    left: 154px;
+    left: 140px;
   }
   .predioEstrutura > .alpendes .apende1  {
-    left: 148px;
+    left: 135px;
   }
   .predioEstrutura > .alpendes .apende2  {
-    left: 148px;
+    left: 135px;
   }
   .predioEstrutura > .alpendes .apende3  {
-    left: 148px;
+    left: 135px;
   }
   .porta .part1 {
-    left: 160px;
+    left: 147px;
   }
   .porta .part2 {
-    left: 230px;
+    left: 218px;
   }
   .pista {
-    left: 152px;
+    left: 140px;
   }
   .painel-control {
     left: 0px;
+  }
+  .lua {
+    left: 398px;
+    top: 10px;
+  }
+  .sol {
+    left: 398px;
+    top: 10px;
+  }
+  
+}
+@media(max-width: 500px) {
+  .painel-control{
+    width: 368px;
+  }
+  .windowControl {
+    width: 65px;
+  }
+  #control-geral {
+    left: 125px;
+  }
+}
+
+@media(max-width: 470px) {
+  .windows {
+    width: 300px;
+  }
+  .window {
+    width: 10%;
+  }
+  .porta .part1 {
+    left: 123px;
+  }
+  .porta .part2 {
+    left: 190px;
+  }
+  .sol {
+    left: 300px;
+  }
+  .lua {
+    left: 300px;
+  }
+  .pinturadomeio {
+    left: 115px;
+  }
+  .predioEstrutura > .alpendes .apende1  {
+    left: 110px;
+  }
+  .predioEstrutura > .alpendes .apende2  {
+    left: 110px;
+  }
+  .predioEstrutura > .alpendes .apende3  {
+    left: 110px;
+  }
+}
+
+@media (max-width: 370px) {
+  .windows {
+    left: 0px;
+  }
+  .pinturadomeio {
+    left: 107px;
+  }
+  .predioEstrutura > .alpendes .apende1  {
+    left: 102px;
+  }
+  .predioEstrutura > .alpendes .apende2  {
+    left: 102px;
+  }
+  .predioEstrutura > .alpendes .apende3  {
+    left: 102px;
+  }
+  .porta .part1 {
+    left: 112px;
+  }
+  .porta .part2 {
+    left: 184px;
   }
 }
